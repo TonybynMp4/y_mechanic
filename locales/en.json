@@ -1,0 +1,33 @@
+{
+    "notify": {
+        "error": {
+            "closest_vehicle": "Il n'y a aucun véhicule proche!",
+            "canceled": "Canceled!",
+            "inside_vehicle": "You can't do this inside a vehicle!",
+            "too_far": "You are too far away from the vehicle!",
+            "too_far_engine": "You are too far away from the engine!",
+            "not_advanced": "Your kit isn't good enough to repair this vehicle!",
+            "not_mechanic": "You are not a mechanic!",
+            "not_in_zone": "You are not allowed to do this here!"
+        },
+        "success": {
+            "engine_repaired": "Engine repaired!",
+            "body_repaired": "Body repaired!",
+            "vehicle_repaired": "Vehicle repaired!",
+            "cleaned": "Vehicle cleaned!",
+            "tyres_changed": "Tires changed!"
+        }
+    },
+    "progress": {
+        "repair_vehicle": "Repairing vehicle..",
+        "repair_body": "Repairing body..",
+        "repair_engine": "Repairing engine..",
+        "changing_tyres": "Changing tires..",
+        "cleaning_vehicle": "Cleaning vehicle.."
+    },
+    "command": {
+        "fix": {
+            "help": "Repair your vehicle (Admin Only)"
+        }
+    }
+}
