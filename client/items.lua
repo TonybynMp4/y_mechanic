@@ -51,7 +51,7 @@ lib.callback.register('qbx_mechanic:client:repairEngine', function(isAdvanced, i
             clip = 'fixing_a_player',
         },
     }) then -- if completed
-        Utils.repairVehicle(veh, false, (not isItem and 1000) or ((Full and 1000) or 500), Full, not isItem, false)
+        Utils.repairVehicle(veh, false, not isItem or isAdvanced and 1000 or 500, isAdvanced, not isItem, false)
         Utils.shutDoor(veh)
         return true
     else -- if canceled
