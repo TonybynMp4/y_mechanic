@@ -2,16 +2,18 @@ local config = require('config.client')
 local repairAreas = {}
 local inZone = false
 
-local function createAreaPoints(job)
+local function clearAreaPoints()
     for i = 1, #repairAreas do
         repairAreas[i]:remove()
     end
-    table.wipe(repairAreas)
+    repairAreas = {}
+end
 
-    local jobArea = config.locations?[job.name]?.repairAreas
+local function createAreaPoints(jobName)
+    local jobArea = config.locations?[jobName]?.repairAreas
     if not jobArea then return end
     for i = 1, #jobArea do
-        local point = lib.repairAreas.new({
+        local point = lib.points.new({
             coords = jobArea[i].coords,
             distance = jobArea[i].radius,
         })
@@ -24,17 +26,43 @@ local function createAreaPoints(job)
             inZone = false
         end
 
-        repairAreas[#repairAreas+1] = point
+        repairAreas[#repairAreas + 1] = point
     end
+end
+
+function GetInZone()
+    return inZone
 end
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate', function(job)
     inZone = false
+    clearAreaPoints()
     if job.type == 'mechanic' then
         createAreaPoints(job)
     end
 end)
 
-function GetInZone()
-    return inZone
-end
+AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
+    if QBX.PlayerData.job.type == 'mechanic' then
+        createAreaPoints(QBX.PlayerData.job.name)
+    end
+end)
+
+AddEventHandler('QBCore:Client:OnPlayerUnload', function()
+    inZone = false
+    clearAreaPoints()
+end)
+
+AddEventHandler('onResourceStart', function(resource)
+    if resource == GetCurrentResourceName() then
+        if QBX.PlayerData.job.type == 'mechanic' then
+            createAreaPoints(QBX.PlayerData.job.name)
+        end
+    end
+end)
+
+AddEventHandler('onResourceStop', function(resource)
+    if resource == GetCurrentResourceName() then
+        clearAreaPoints()
+    end
+end)
