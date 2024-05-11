@@ -1,6 +1,6 @@
 local Utils = require('modules.utils')
 
-lib.callback.register('qbx_mechanic:client:adminRepair', function()
+lib.callback.register('y_mechanic:client:adminRepair', function()
     if cache.seat == -1 then
         Utils.repairVehicle(cache.vehicle, true, 1000, true, true, true)
         return true

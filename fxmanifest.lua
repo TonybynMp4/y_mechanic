@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-repository 'https://github.com/Qbox-project/qbx_mechanic'
+repository 'https://github.com/Qbox-project/y_mechanic'
 version '1.1.0'
 
 ox_lib 'locale'

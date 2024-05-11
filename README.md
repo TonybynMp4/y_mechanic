@@ -1,4 +1,4 @@
-# qbx_mechanic
+# y_mechanic
 
 ## Items
 ```lua
@@ -12,7 +12,7 @@
             image = 'advancedkit.png',
         },
         server = {
-            export = "qbx_mechanic.advancedrepairkit"
+            export = "y_mechanic.advancedrepairkit"
         },
         consume = 0.5
     },
@@ -24,7 +24,7 @@
         close = true,
         description = "A nice toolbox with stuff to repair your vehicle",
         server = {
-            export = "qbx_mechanic.repairkit"
+            export = "y_mechanic.repairkit"
         },
         consume = 0.25
     },
@@ -36,7 +36,7 @@
         close = true,
         description = "A nice toolbox with stuff to repair your vehicle",
         server = {
-            export = "qbx_mechanic.bodykit"
+            export = "y_mechanic.bodykit"
         },
         consume = 0.5
     },
@@ -48,7 +48,7 @@
         close = true,
         description = "Grandpa's cleaning kit",
         server = {
-            export = "qbx_mechanic.cleaningkit"
+            export = "y_mechanic.cleaningkit"
         },
         consume = 0.25
     },
@@ -60,7 +60,7 @@
         close = true,
         description = "Spare wheels'
         server = {
-            export = "qbx_mechanic.wheelkit"
+            export = "y_mechanic.wheelkit"
         },
         consume = 1
     },

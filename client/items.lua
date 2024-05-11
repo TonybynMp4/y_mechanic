@@ -1,7 +1,7 @@
 local config = require 'config.client'
 local Utils = require 'modules.utils'
 
-lib.callback.register('qbx_mechanic:client:repairEngine', function(isAdvanced, isItem)
+lib.callback.register('y_mechanic:client:repairEngine', function(isAdvanced, isItem)
     if cache.vehicle then
         exports.qbx_core:Notify(locale('notify.error.vehicle_inside'), 'error')
         return
@@ -61,7 +61,7 @@ lib.callback.register('qbx_mechanic:client:repairEngine', function(isAdvanced, i
     end
 end)
 
-lib.callback.register('qbx_mechanic:client:repairBody', function(isItem)
+lib.callback.register('y_mechanic:client:repairBody', function(isItem)
     if cache.vehicle then
         exports.qbx_core:Notify(locale('notify.error.inside_vehicle'), 'error')
         return
@@ -104,7 +104,7 @@ lib.callback.register('qbx_mechanic:client:repairBody', function(isItem)
     end
 end)
 
-lib.callback.register('qbx_mechanic:client:cleanVehicle', function(isItem)
+lib.callback.register('y_mechanic:client:cleanVehicle', function(isItem)
     if cache.vehicle then
         exports.qbx_core:Notify(locale('error.inside_vehicle'), 'error')
         return
@@ -144,7 +144,7 @@ lib.callback.register('qbx_mechanic:client:cleanVehicle', function(isItem)
     end
 end)
 
-lib.callback.register('qbx_mechanic:client:useWheelKit', function()
+lib.callback.register('y_mechanic:client:useWheelKit', function()
     if cache.vehicle then
         exports.qbx_core:Notify(locale('notify.error.inside_vehicle'), 'error')
         return

@@ -1,7 +1,7 @@
 local function useRepairKit(source, isAdvanced)
     local player = exports.qbx_core:GetPlayer(source)
     if not player then return end
-    local used = lib.callback.await('qbx_mechanic:client:repairEngine', source, isAdvanced, true)
+    local used = lib.callback.await('y_mechanic:client:repairEngine', source, isAdvanced, true)
     if not used then return false end
 
     exports.qbx_core:Notify(source, locale('notify.success.engine_repaired'), "success")
@@ -25,7 +25,7 @@ end)
 exports("bodykit", function(event, _, inventory, _, _)
     local source = inventory.id
     if event == 'usingItem' then
-        local used = lib.callback.await('qbx_mechanic:client:repairBody', source, true)
+        local used = lib.callback.await('y_mechanic:client:repairBody', source, true)
         return used
     end
 
@@ -37,7 +37,7 @@ end)
 exports("cleaningkit", function(event, _, inventory, _, _)
     local source = inventory.id
     if event == 'usingItem' then
-        local used = lib.callback.await('qbx_mechanic:client:cleanVehicle', source, true)
+        local used = lib.callback.await('y_mechanic:client:cleanVehicle', source, true)
         return used
     end
 
@@ -49,7 +49,7 @@ end)
 exports("wheelkit", function(event, _, inventory, _, _)
     local source = inventory.id
     if event == 'usingItem' then
-        local used = lib.callback.await('qbx_mechanic:client:useWheelKit', source)
+        local used = lib.callback.await('y_mechanic:client:useWheelKit', source)
         return used
     end
 

@@ -5,10 +5,33 @@ return {
     locations = {
         harmony = {
             duty = {
-                coords = vector3(-205.0, -1308.0, 31.3),
+                coords = vec3(-205.0, -1308.0, 31.3),
             },
             repairAreas = {
-                { coords = vec3(1180, 2649.5, 37.5), radius = 35.0 },
+                {
+                    coords = vec3(1180, 2649.5, 37.5),
+                    radius = 35.0
+                },
+            }
+        },
+        beekersgarage = {
+            dutyAreas = {
+                {
+                    coords = vec3(549.0, -192.0, 54.5),
+                    target = {
+                        -- optional: if you want to use target
+                        coords = vec4(549.0, -192.0, 54.5, 0),
+                        size = vec3(1.5, 1.5, 1.0),
+                        -- optional: if you want to use a ped instead of a boxzone
+                        ped = `s_m_y_xmech_01`,
+                    }
+                }
+            },
+            repairAreas = {
+                {
+                    coords = vec3(121.79, 6613.39, 31.85),
+                    radius = 35.0
+                },
             }
         }
     },
