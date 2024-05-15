@@ -27,6 +27,7 @@ end
 ---@param clean boolean
 local function repairVehicle(vehicle, body, engine, repairfull, tyres, clean)
     if not vehicle then return end
+    local fuel = GetVehicleFuelLevel(vehicle)
     if body then
         local engineHealth = GetVehicleEngineHealth(vehicle)
         SetVehicleBodyHealth(vehicle, 1000.0)
@@ -52,6 +53,8 @@ local function repairVehicle(vehicle, body, engine, repairfull, tyres, clean)
     if repairfull then
         SetVehicleFixed(vehicle)
     end
+    -- One of the natives sets the fuel to 65 for some reason 🙄
+    SetVehicleFuelLevel(vehicle, fuel)
 end
 
 return {
