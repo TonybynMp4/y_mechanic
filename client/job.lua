@@ -54,7 +54,7 @@ local function createDutyZones(job)
                             TriggerServerEvent('QBCore:ToggleDuty')
                         end,
                         distance = duty.distance,
-                        groups = job
+                        groups = job.name
                     }
                 }
             })
@@ -89,7 +89,7 @@ end
 
 local function clearDutyZones()
     for i = 1, #boxZoneIds do
-        exports.ox_target:removeBoxZone(boxZoneIds[i])
+        exports.ox_target:removeZone(boxZoneIds[i])
     end
     boxZoneIds = {}
 
