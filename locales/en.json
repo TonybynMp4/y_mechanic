@@ -18,6 +18,11 @@
             "tyres_changed": "Tires changed!"
         }
     },
+    "text": {
+        "duty": "Toggle Duty",
+        "on_duty_button": "[E] Go On Duty",
+        "off_duty_button": "[E] Go Off Duty"
+    },
     "progress": {
         "repair_vehicle": "Repairing vehicle..",
         "repair_body": "Repairing body..",
