@@ -1,12 +1,16 @@
 return {
     -- Only allow vehicles to be repaired in the repair areas
     restrictToZone = true,
+    debugPoly = true,
 
     locations = {
         harmony = {
-            duty = {
-                coords = vec3(-205.0, -1308.0, 31.3),
-                distance = 2.0,
+            dutyAreas = {
+                {
+                    coords = vec4(1186.75, 2638.075, 38.2, 90),
+                    distance = 2.0,
+                    size = vec3(1, 2, 1.0)
+                }
             },
             repairAreas = {
                 {
@@ -18,10 +22,10 @@ return {
         beekersgarage = {
             dutyAreas = {
                 {
-                    coords = vec4(549.0, -192.0, 54.5, 0),
+                    coords = vec4(100.6, 6619.8, 32.2, 315),
                     distance = 2.0,
                     -- optional: if you want to use target
-                    size = vec3(1.5, 1.5, 1.0),
+                    size = vec3(1, 2, 1.0),
                 }
             },
             repairAreas = {
@@ -30,7 +34,46 @@ return {
                     radius = 35.0
                 },
             }
-        }
+        },
+        bennys = {
+            dutyAreas = {
+                {
+                   coords = vec4(-204.5, -1327.5, 31.25, 170),
+                    distance = 2.0,
+                    size = vec3(1.5, 1.5, 1.0),
+                }
+            },
+            repairAreas = {
+                {
+                    coords = vec3(-211, -1311.5, 31),
+                    radius = 40.0
+                },
+            }
+        },
+        lscustom = {
+            dutyAreas = {
+                {
+                    coords = vec4(-347.51, -133.37, 39.01, 70),
+                    distance = 2.0,
+                    size = vec3(1.5, 1.5, 1.0),
+                },
+                {
+                    coords = vec4(738.57, -1077.94, 22.20, 270.03),
+                    distance = 2.0,
+                    size = vec3(1.5, 1.5, 1.0),
+                }
+            },
+            repairAreas = {
+                {
+                    coords = vec3(-369.83, -126.88, 38.7),
+                    radius = 50.0
+                },
+                {
+                    coords = vec3(718.5, -1072.5, 22),
+                    radius = 30.0
+                },
+            }
+        },
     },
 
     backEngineVehicles = {
