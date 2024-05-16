@@ -1,7 +1,7 @@
 return {
     -- Only allow vehicles to be repaired in the repair areas
     restrictToZone = true,
-    debugPoly = true,
+    debugPoly = false,
 
     locations = {
         harmony = {
