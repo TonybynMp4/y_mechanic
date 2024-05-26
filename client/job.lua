@@ -32,8 +32,8 @@ local function createAreaPoints(jobName)
     end
 end
 
-local function createDutyZones(job)
-    local duties = config.locations?[job.name]?.dutyAreas
+local function createDutyZones(jobName)
+    local duties = config.locations?[jobName]?.dutyAreas
 
     if not duties then return end
     for i = 1, #duties do
@@ -54,7 +54,7 @@ local function createDutyZones(job)
                             TriggerServerEvent('QBCore:ToggleDuty')
                         end,
                         distance = duty.distance,
-                        groups = job.name
+                        groups = jobName
                     }
                 }
             })
@@ -107,16 +107,17 @@ RegisterNetEvent('QBCore:Client:OnJobUpdate', function(job)
     inZone = false
     clearAreaPoints()
     clearDutyZones()
+    Wait(100)
     if job.type == 'mechanic' then
-        createAreaPoints(job)
-        createDutyZones(job)
+        createAreaPoints(job.name)
+        createDutyZones(job.name)
     end
 end)
 
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     if QBX.PlayerData.job.type == 'mechanic' then
         createAreaPoints(QBX.PlayerData.job.name)
-        createDutyZones(QBX.PlayerData.job)
+        createDutyZones(QBX.PlayerData.job.name)
     end
 end)
 
@@ -130,7 +131,7 @@ AddEventHandler('onResourceStart', function(resource)
     if resource == GetCurrentResourceName() then
         if QBX.PlayerData.job.type == 'mechanic' then
             createAreaPoints(QBX.PlayerData.job.name)
-            createDutyZones(QBX.PlayerData.job)
+            createDutyZones(QBX.PlayerData.job.name)
         end
     end
 end)
