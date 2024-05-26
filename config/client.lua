@@ -14,8 +14,8 @@ return {
             },
             repairAreas = {
                 {
-                    coords = vec3(1180, 2649.5, 37.5),
-                    radius = 35.0
+                    coords = vec3(1185, 2653, 38),
+                    radius = 25.0
                 },
             }
         },
