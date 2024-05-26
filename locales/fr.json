@@ -1,0 +1,38 @@
+{
+    "notify": {
+        "error": {
+            "closest_vehicle": "Il n'y a aucun véhicule proche!",
+            "canceled": "Annulé!",
+            "inside_vehicle": "Vous ne pouvez pas faire cela dans un véhicle!",
+            "too_far": "Vous êtes trop loin!",
+            "too_far_engine": "Vous êtes trop loin du moteur!",
+            "not_advanced": "Votre kit n'est pas assez complet pour cette réparation!",
+            "not_mechanic": "Vous n'êtes pas mécanicien!",
+            "not_in_zone": "Vous ne pouvez pas faire ça ici!"
+        },
+        "success": {
+            "engine_repaired": "Moteur réparé!",
+            "body_repaired": "Carrosserie réparée!",
+            "vehicle_repaired": "Véhicule réparé!",
+            "cleaned": "Véhicule nettoyé!",
+            "tyres_changed": "Pneus changés!"
+        }
+    },
+    "text": {
+        "on_duty": "Dé/Activer le service",
+        "on_duty_button": "[E] Prendre son service",
+        "off_duty_button": "[E] Quitter son service"
+    },
+    "progress": {
+        "repair_vehicle": "Répare le véhicule..",
+        "repair_body": "Répare la carrosserie..",
+        "repair_engine": "Répare le moteur..",
+        "changing_tyres": "Change les pneus..",
+        "cleaning_vehicle": "Nettoie le véhicule.."
+    },
+    "command": {
+        "fix": {
+            "help": "Réparer le véhicule (Admins seulement)"
+        }
+    }
+}

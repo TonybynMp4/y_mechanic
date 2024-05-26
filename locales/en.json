@@ -1,7 +1,7 @@
 {
     "notify": {
         "error": {
-            "closest_vehicle": "Il n'y a aucun véhicule proche!",
+            "closest_vehicle": "No vehicle near you!",
             "canceled": "Canceled!",
             "inside_vehicle": "You can't do this inside a vehicle!",
             "too_far": "You are too far away from the vehicle!",

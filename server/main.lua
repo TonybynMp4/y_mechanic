@@ -1,3 +1,5 @@
+lib.versionCheck('TonybynMp4/y_mechanic')
+
 lib.addCommand("fix", {
     help =  locale('command.fix.help'),
     params = {},
