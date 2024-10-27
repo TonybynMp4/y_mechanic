@@ -1,7 +1,9 @@
 fx_version 'cerulean'
 game 'gta5'
 
-repository 'https://github.com/Qbox-project/y_mechanic'
+author 'Ynot'
+description 'Mechanic job & items'
+repository 'https://github.com/Ybox-project/y_mechanic'
 version '1.0.1'
 
 ox_lib 'locale'
