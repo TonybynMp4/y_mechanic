@@ -16,7 +16,7 @@ lib.callback.register('y_mechanic:client:adminRepair', function()
     Utils.openDoor(vehicle)
     if lib.progressBar({
         duration = math.random(10000, 20000),
-        label = locale("progress.repairing_vehicle"),
+        label = locale("progress.repair_vehicle"),
         useWhileDead = false,
         canCancel = true,
         disable = {
