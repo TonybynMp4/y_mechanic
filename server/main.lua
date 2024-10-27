@@ -1,4 +1,4 @@
-lib.versionCheck('TonybynMp4/y_mechanic')
+lib.versionCheck('Ybox-Project/y_mechanic')
 
 lib.addCommand("fix", {
     help =  locale('command.fix.help'),
