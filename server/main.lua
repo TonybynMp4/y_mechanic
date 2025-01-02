@@ -1,4 +1,4 @@
-lib.versionCheck('Ybox-Project/y_mechanic')
+lib.versionCheck('ynot-workshop/y_mechanic')
 
 lib.addCommand("fix", {
     help =  locale('command.fix.help'),
