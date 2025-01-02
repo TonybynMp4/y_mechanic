@@ -4,7 +4,7 @@ game 'gta5'
 author 'Ynot'
 description 'Mechanic job & items'
 repository 'https://github.com/ynot-workshop/y_mechanic'
-version '1.0.2'
+version '1.0.3'
 
 ox_lib 'locale'
 
